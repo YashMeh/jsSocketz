@@ -10,7 +10,6 @@ var regmsg=`SHARE #pubkey KEY @senz #time ${time} ^dev2 signature\n`;
 const imagePathToSave="received.jpg";
 var aes=new AESUtil.AESUtils(sharedKey);        
 client.sendMessage(regmsg).then(function(registered){
-    //console.log(registered);   
     return new Promise(function(resolve,reject){
         resolve(registered);
     })
