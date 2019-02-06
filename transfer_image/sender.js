@@ -13,10 +13,8 @@ var byteString=imageUtil.imageToString(imagePathToSend);
 //Encrypt using AES Crypto
 var aes=new AESUtil.AESUtils(sharedKey);
 var byteString=aes.encrypt(byteString);
-//console.log(byteString);
 //Send Message
 var senmsg = `DATA $image ${byteString} @dev2 #time ${time} ^dev1 signature\n`
-//sendImage(regmsg,senmsg);
 client.sendMessage(regmsg).then(function(registered){
     console.log(registered);
     client.sendMessage(senmsg).then(function(sentData){
