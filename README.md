@@ -1,6 +1,6 @@
 # jsSocketz
 
-jsSocketz is a nodejs program for sending images in a peer to peer UDP connection.
+jsSocketz is a nodejs program for sending images in a peer to peer UDP connection using senz query.
 
 ## Installation
 
@@ -13,5 +13,11 @@ npm install
 ```bash
 cd transfer_image
 node receiver.js
+```
+Goto localhost:3000
+Register device for receiving
+Get ready to receive data
+
+```bash
 node sender.js
 ```
