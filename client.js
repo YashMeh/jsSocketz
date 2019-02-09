@@ -18,14 +18,24 @@ var sendMessage=function(msg){
     })
     
 }
-var receiveMessage=function(){
+var getResponse=function(){
     return new Promise(function(resolve,reject){
-        socket.on("data",function(data){
-            resolve(data.toString('utf8'));
-                    })
-    })
-        
-        
+            socket.on("data",function(data){
+                data=data.toString('utf8').split(" ")[2]
+                var chunk="";
+                for(var i=0;i<data.length;i++){
+                    chunk+=data[i];
+                }
+                resolve(chunk);  
+            })
+            
+        })
+    }
+
+var receiveMessage=async function(){
+        let data=await getResponse();
+        return data;
+                
     
     
 }

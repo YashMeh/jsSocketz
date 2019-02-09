@@ -1,7 +1,6 @@
 const AESUtil=require("../utils/aes_utils");
 const imageUtil=require("../utils/image_utils");
 const client=require("../client");
-
 const sharedKey=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 //Register Device 
 console.log("Registering Device");
@@ -21,5 +20,7 @@ client.sendMessage(regmsg).then(function(registered){
     console.log(registered);
     client.sendMessage(senmsg).then(function(sentData){
         console.log(sentData);
+        
     })
 });
+
