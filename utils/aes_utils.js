@@ -34,7 +34,7 @@ class AESUtils
         var decryptedBytes = aesCbc.decrypt(encryptedBytes);
         //Convert the decrypted bytes to text
         var uint8 = new Uint8Array(decryptedBytes)
-        var decryptedText= ab2str(uint8,'base64')
+        var decryptedText= ab2str(uint8)
         return this.unpad(decryptedText);
         
     }
