@@ -57,8 +57,4 @@ class AESUtils
     }
 
 }
-<<<<<<< HEAD
 module.exports={AESUtils}
-=======
-module.exports={AESUtils}
->>>>>>> 09f3e7419c6deda99813650a61930e694ad92c94

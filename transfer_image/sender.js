@@ -15,20 +15,14 @@ var byteString=imageUtil.imageToString(imagePathToSend);
 //Encrypt using AES Crypto
 var aes=new AESUtil.AESUtils(sharedKey);
 var byteString=aes.encrypt(byteString);
+//console.log(byteString);
 //Send Message
 var senmsg = `DATA $image ${byteString} @dev2 #time ${time} ^dev1 signature\n`
-<<<<<<< HEAD
 //sendImage(regmsg,senmsg);
 var registeringDevice=function(regmsg)
 {
     client.sendMessage(regmsg).then(function(registered){
         console.log(registered);
-=======
-client.sendMessage(regmsg).then(function(registered){
-    console.log(registered);
-    client.sendMessage(senmsg).then(function(sentData){
-        console.log(sentData);
->>>>>>> 09f3e7419c6deda99813650a61930e694ad92c94
     })
 }
 var sendingMessage=function(senmsg){

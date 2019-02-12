@@ -8,6 +8,7 @@ var imageToString=function(filename){
 }
 var stringToImage=function(str,filename){
     //Decoding the base64 string and writing the file 
+    //var buf = Buffer.from(str,'base64');
     fs.writeFile(filename,str,'base64',function(err){
         if(err)
         throw err;
