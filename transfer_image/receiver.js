@@ -26,13 +26,12 @@ var receiveImage=function(){
     console.log("CHECK YOUR DIRECTORY");
     })
 }
-
 app.get("/",function(req,res){
-    res.sendFile("home.html",{root:__dirname})
+    res.sendFile("receiveRegister.html",{root:__dirname})
 })      
 app.get("/reg2",function(req,res){
     registerDevice();
-    res.sendFile("page1.html",{root:__dirname})
+    res.sendFile("receiveAccept.html",{root:__dirname})
 })
 app.get("/rec2",function(req,res){
     receiveImage();

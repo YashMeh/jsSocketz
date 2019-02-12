@@ -26,6 +26,7 @@ var getResponse=function(){
                 for(var i=0;i<data.length;i++){
                     chunk+=data[i];
                 }
+                console.log(chunk);
                 resolve(chunk);  
             })
             
