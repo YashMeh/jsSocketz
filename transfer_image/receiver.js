@@ -9,6 +9,7 @@ const sharedKey=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 var time=client.getTimestamp();
 var regmsg=`SHARE #pubkey KEY @senz #time ${time} ^dev2 signature\n`;
 const imagePathToSave="received.jpg";
+<<<<<<< HEAD
 var aes=new AESUtil.AESUtils(sharedKey);  
 var registerDevice=function(mssg){
     console.log("Registering Device");
@@ -20,6 +21,18 @@ var registerDevice=function(mssg){
     })    
 }
 var receiveImage=function(){
+=======
+var aes=new AESUtil.AESUtils(sharedKey);        
+client.sendMessage(regmsg).then(function(registered){
+    return new Promise(function(resolve,reject){
+        resolve(registered);
+    })
+})
+.then(function(mssg){
+    console.log("<><><><><><><><><><><><><><<><>");
+    console.log(mssg);
+    console.log("Ready to receive message ");
+>>>>>>> 09f3e7419c6deda99813650a61930e694ad92c94
     client.receiveMessage().then(function(encImg){
     var decrptedBase64=aes.decrypt(encImg);
     imageUtil.stringToImage(decrptedBase64,imagePathToSave);
