@@ -30,7 +30,7 @@ app.get("/",function(req,res){
     res.sendFile("receiveRegister.html",{root:__dirname})
 })      
 app.get("/reg2",function(req,res){
-    registerDevice();
+    //registerDevice();
     res.sendFile("receiveAccept.html",{root:__dirname})
 })
 app.get("/rec2",function(req,res){
